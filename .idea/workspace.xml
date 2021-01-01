@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed286539-1207-448a-b06a-0f98e62c385e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1mQNzfMPDHuZoB0lG93JX6KQ0Z5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Dart Command Line App.server">
+    <configuration name="server" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="filePath" value="$PROJECT_DIR$/server/main.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web/index.html" type="DartWebdevConfigurationType" factoryName="Dart Web" temporary="true" nameIsGenerated="true">
+      <option name="htmlFilePath" value="$PROJECT_DIR$/web/index.html" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Dart Command Line App.server" />
+      <item itemvalue="Dart Web.web/index.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Web.web/index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed286539-1207-448a-b06a-0f98e62c385e" name="Default Changelist" comment="" />
+      <created>1609422119790</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609422119790</updated>
+      <workItem from="1609422121193" duration="51000" />
+      <workItem from="1609422195545" duration="634000" />
+      <workItem from="1609423721553" duration="7595000" />
+      <workItem from="1609490950067" duration="1032000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="434" y="189" width="1071" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609485110542">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state x="434" y="189" width="1071" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.971@0.25.1680.971" timestamp="1609485110542" />
+    <state x="707" y="349" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1609480850656">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state x="707" y="349" key="#com.intellij.ide.util.TreeFileChooserDialog/0.25.1680.971@0.25.1680.971" timestamp="1609480850656" />
+    <state width="1397" height="254" key="GridCell.Tab.0.bottom" timestamp="1609490907999">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state width="1397" height="254" key="GridCell.Tab.0.bottom/0.25.1680.971@0.25.1680.971" timestamp="1609490907999" />
+    <state width="1397" height="254" key="GridCell.Tab.0.center" timestamp="1609490907998">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state width="1397" height="254" key="GridCell.Tab.0.center/0.25.1680.971@0.25.1680.971" timestamp="1609490907998" />
+    <state width="1397" height="254" key="GridCell.Tab.0.left" timestamp="1609490907998">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state width="1397" height="254" key="GridCell.Tab.0.left/0.25.1680.971@0.25.1680.971" timestamp="1609490907998" />
+    <state width="1397" height="254" key="GridCell.Tab.0.right" timestamp="1609490907999">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state width="1397" height="254" key="GridCell.Tab.0.right/0.25.1680.971@0.25.1680.971" timestamp="1609490907999" />
+    <state x="592" y="152" key="SettingsEditor" timestamp="1609479514041">
+      <screen x="0" y="25" width="1680" height="971" />
+    </state>
+    <state x="592" y="152" key="SettingsEditor/0.25.1680.971@0.25.1680.971" timestamp="1609479514041" />
+  </component>
+</project>
