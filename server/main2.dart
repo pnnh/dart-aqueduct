@@ -2,14 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 void main() async {
-  var server = await HttpServer.bind(InternetAddress.loopbackIPv4, 8080);
+  var server = await HttpServer.bind(InternetAddress.loopbackIPv4, 8081);
   print('Serving at ${server.address}:${server.port}');
 
   await for (var request in server) {
-    // request.response
-    //   ..headers.contentType = ContentType('text', 'html', charset: 'utf-8')
-    //   ..write(await readFile())
-    //   ..close();
     handleRequest(request);
   }
 }
@@ -19,23 +15,10 @@ void handleRequest(HttpRequest request) async {
   print("===>${path}");
   var response = request.response;
 
-  // if (path == '/') {
-  //   await writeFile(response, './public/index.html');
-  // } else if (path == '/favicon.ico') {
-  //   await writeFile(response, './public/favicon.ico');
-  // } else if (path == '/styles.css') {
-  //   await writeFile(response, './public/styles.css');
-  // } else {
-  //   //await writeFile(response, './build/web${path.trimRight()}');
-  //   await writeFile(response, './public${path.trimRight()}');
-  // }
   if (path == '/') {
-    path = '/index.html';
-  }
-  if (path.startsWith('/build') && path.endsWith('.dart')) {
-    //await writeFile(response, './client${path.substring(6).trimRight()}');
+    await writeFile(response, './build/web/index.html');
   } else {
-    await writeFile(response, './public${path.trimRight()}');
+    await writeFile(response, './build/web/${path.trimRight()}');
   }
   await response.close();
 }
@@ -49,16 +32,16 @@ void writeFile(HttpResponse response, String filePath) async {
   }
   if (filePath.endsWith('.html')) {
     response.headers.contentType = ContentType('text', 'html');
-    response.write(await myFile.readAsString());
+    await response.addStream(await myFile.openRead());
   } else if (filePath.endsWith('.css')) {
     response.headers.contentType = ContentType('text', 'css');
-    response.write(await myFile.readAsString());
+    await response.addStream(await myFile.openRead());
   } else if (filePath.endsWith('.js')) {
     response.headers.contentType = ContentType('application', 'javascript');
-    response.write(await myFile.readAsString(encoding: utf8));
+    await response.addStream(await myFile.openRead());
   } else if (filePath.endsWith('.map')) {
     response.headers.contentType = ContentType('text', 'plain');
-    response.write(await myFile.readAsString(encoding: utf8));
+    await response.addStream(await myFile.openRead());
   } else if (filePath.endsWith('.dart')) {
     response.headers.contentType = ContentType('application', 'dart');
     //var content = await myFile.readAsString();
