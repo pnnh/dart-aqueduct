@@ -1,31 +1,19 @@
-import 'dart:developer';
+
 import 'package:universal_html/html.dart';
-//import '../../components/article.dart';
-import '../widgets/article.dart';
-import 'package:quickstart/widgets/article.dart';
+
+import 'package:quickstart/context.dart';
+import 'package:quickstart/widgets/article_list.dart';
 
 void main() {
-  // var htmlEl = document.createElement('html');
-  // var bodyEl = document.createElement('body');
-  // bodyEl.innerText = 'aaaa';
-  // htmlEl.append(bodyEl);
-  // document.append(htmlEl);
+  var artEl = document.querySelector('some-app');
+  var context = Context(true);
+  context.isClient = true;
+  var artList = ArticleListWidget();
+  if (!artEl.hasAttribute('ssr')) {
+    artEl.append(artList.Render(context));
+  }
+    ArticleListWidget.Bind(artEl);
+  //document.body.append(artEl);
+  print('jjj');
 
-  //
-  // window.fetch("localhost:8080").then((value) =>
-  //   print(value)
-  // );
-
-  var artEl = document.querySelector('some-article');
-
-  var art = new ArticleWidget();
-  var context = Context(IsClient: true, IsDevelop: true);
-  context.IsDevelop = true;
-  context.IsClient = true;
-
-  art.Render(artEl, context);
-
-  var div = document.createElement('div');
-  div.innerText = 'aaaabbbb';
-  document.body.append(div);
 }

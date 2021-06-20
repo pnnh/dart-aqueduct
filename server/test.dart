@@ -2,6 +2,7 @@ import 'package:universal_html/html.dart';
 import 'package:universal_html/parsing.dart';
 import 'dart:io' as io;
 import 'package:quickstart/widgets/article.dart';
+import 'package:quickstart/context.dart';
 
 void main() async {
   var myFile = io.File("web/index.html");
@@ -11,11 +12,10 @@ void main() async {
   var artEl = xmlDocument.querySelector('some-article');
   artEl.innerText = 'B';
 
-  var art = new ArticleWidget();
-  var context = Context(IsClient: false, IsDevelop: false);
-  context.IsDevelop = false;
-  context.IsClient = false;
-  art.Render(artEl, context);
+  var art = new ArticleWidget('啊啊啊');
+  var context = Context(false);
+  context.isClient = false;
+  //art.Render(artEl, context);
 
   print(xmlDocument.documentElement.outerHtml);
   //

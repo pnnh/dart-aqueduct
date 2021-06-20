@@ -1,56 +1,43 @@
 library quickstart;
 
 import 'package:universal_html/html.dart';
+import 'package:quickstart/context.dart';
 
-
-class Context {
-  bool IsClient;
-  bool IsDevelop;
-
-  Context({IsClient, IsDevelop}) {
-    if (IsDevelop) {
-      IsClient = true;
-    }
-  }
-}
 
 class ArticleWidget {
-  String text = '哈哈啊';
+  String id;
 
-  // void OnServer() {
-  //
-  // }
-  //
-  // void OnBrowser() {
-  //
-  // }
-
-  void Render(HtmlElement element, Context context) {
-    // 通过xml呈现，返回xml节点
-
-    //final div = new DivElement();
-    element.append(new Element.tag("h1")
-    //..classes.add("greeting")
-      ..appendText("Hello world222!"));
-
-    // Print outer HTML
-    print(element.outerHtml);
-    // --> <div><h1>Hello world</h1></div>
-
-    // Do a CSS query
-    print(element.querySelector("h1").text);
-
-    if (context.IsClient) {
-      var h1 = element.querySelector('h1');
-      h1.onClick.listen((event) {
-        window.console.log('哈哈哈');
-      });
-    }
+  ArticleWidget(String content) {
+    id = content;
   }
 
-  //
-  // void RenderHtml() {
-  //   // 通过dom操作呈现，返回dom对象
-  //   return null;
-  // }
+  HtmlElement Render(Context context) {
+    //if (!context.isClient) {
+    var element = Element.tag('some-article');
+
+    //var shadow = element.attachShadow({'mode': 'open'});
+
+    element.append(Element.tag("p")
+        ..appendText(this.getArticle(context)));
+    //}
+    return element;
+  }
+
+  static void Bind(HtmlElement element) {
+    var h1 = element.querySelector('p');
+    h1.onClick.listen((event) {
+      window.console.log('哈哈哈');
+    });
+  }
+
+  static void Style() {
+
+  }
+
+  String getArticle(Context context) {
+    if (id.isEmpty) {
+      id = '0';
+    }
+    return '这是一篇文章：' + id;
+  }
 }
